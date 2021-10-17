@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Notes</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/tachyons@4.12.0/css/tachyons.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+    <script src="scripts.js" defer></script>
+    <title>Notes</title>
+  </head>
+  <body class="avenir pa4">
+    <h1 class="f3 f2-m f1-l fw6 black-90 mv3">Notepad</h1>
+    <form id="note-form" class="pv4">
+      <div class="note-field ba">
+        <input
+          id="note-title"
+          class="ma1 pa3 w-25 measure"
+          type="text"
+          placeholder="Enter Note Title"
+          required
+        />
+        <input
+          id="note-text"
+          class="ma1 pa3 w-100 measure"
+          type="text"
+          placeholder="Enter your Note here"
+          required
+        />
+      </div>
+      <div class="form-field">
+        <button
+          id="save-note"
+          type="submit"
+          class="mt3 f6 ph3 pv2 mb2 dib white bg-green"
+        >
+          Save Note
+        </button>
+      </div>
+    </form>
+    <section id="Notepad" class="pa3">
+      <ul id="Notes-list" class="list pl0 measure"></ul>
+    </section>
+  </body>
 </html>
